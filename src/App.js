@@ -1,3 +1,5 @@
+// 7/21 JP Note: wrt Deliverable 2: In order to toggle the visibility of the NewPOemForm, I needed to add onClick={this.handleClick} to the button element, then define the handleClick function (which updates the newly-created state key that I named, "newPoemFormVisible". 
+
 import React from "react";
 import "./App.css";
 import PoemsContainer from "./PoemsContainer";
@@ -7,7 +9,7 @@ class App extends React.Component {
   state = {
     poems: [],
     newPoemFormVisible: false
-  }
+  
 
   componentDidMount(){
     fetch("http://localhost:3000/poems")
